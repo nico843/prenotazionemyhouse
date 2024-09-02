@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contributo a MY HOUSE</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-50">
+  <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
+    <h2 class="text-lg font-bold mb-4">Grazie per la tua prenotazione!</h2>
+    <p class="mb-4 text-sm font-medium">Hai prenotato i tuoi drink con successo. Procedi al pagamento tramite uno dei metodi qui sotto:</p>
+    
+    <!-- PayPal Button -->
+    <a href="https://paypal.me/NicoloSolieri?country.x=IT&locale.x=it_IT" target="_blank"
+      class="w-full bg-blue-600 text-white py-2 flex items-center justify-center mb-4 rounded">
+      <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+        <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+      </svg>
+      Prenota con PayPal
+    </a>
+
+    <!-- Bank Transfer Information -->
+    <div class="p-4 mb-4 border rounded-lg">
+      <h3 class="text-sm font-medium mb-2">Bonifico Bancario</h3>
+      <p class="text-sm">
+        Per prenotare tramite bonifico bancario, usa i seguenti dati:
+      </p>
+      <ul class="text-sm mt-2 mb-2">
+        <li><strong>Intestatario:</strong> Solieri Nicolo Nikita</li>
+        <li><strong>IBAN:</strong> IT34X0503412906000000021001</li>
+        <li><strong>BIC/SWIFT:</strong> BAPPIT21409</li>
+        <li><strong>Banca:</strong> BANCO BPM</li>
+        <li><strong>Causale:</strong> Contributo MY HOUSE</li>
+      </ul>
+    </div>
+    
+    <!-- WhatsApp Contact Button -->
+    <a href="https://wa.me/393703258236" target="_blank"
+      class="w-full bg-green-500 text-white py-2 flex items-center justify-center rounded">
+      <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16v16H4z" />
+        <path d="M16 8l-4 8-4-4-4 4v-8" />
+      </svg>
+      Contattami su WhatsApp
+    </a>
+  </div>
+</body>
+
+</html>

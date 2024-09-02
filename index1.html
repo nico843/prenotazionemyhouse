@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riepilogo Prenotazione</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-50">
+  <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
+    <h2 class="text-lg font-bold mb-4">Riepilogo Prenotazione</h2>
+    <div id="summary" class="mb-4"></div>
+    <a href="index2.html" class="w-full bg-blue-600 text-white py-2 flex items-center justify-center rounded">
+      Conferma Prenotazione
+    </a>
+  </div>
+
+  <script>
+    function displaySummary() {
+      const drinkSelection = JSON.parse(localStorage.getItem('drinkSelection'));
+      if (drinkSelection) {
+        const { vodkaLemon, vodkaTonic, ginLemon, ginTonic, totalPrice } = drinkSelection;
+
+        let summaryHTML = '<ul class="list-disc pl-5">';
+        if (vodkaLemon > 0) summaryHTML += `<li>Vodka Lemon: ${vodkaLemon} x 2 €</li>`;
+        if (vodkaTonic > 0) summaryHTML += `<li>Vodka Tonic: ${vodkaTonic} x 2 €</li>`;
+        if (ginLemon > 0) summaryHTML += `<li>Gin Lemon: ${ginLemon} x 2 €</li>`;
+        if (ginTonic > 0) summaryHTML += `<li>Gin Tonic: ${ginTonic} x 2 €</li>`;
+        summaryHTML += `</ul><p class="mt-4 font-bold">Totale da pagare: ${totalPrice} €</p>`;
+
+        document.getElementById('summary').innerHTML = summaryHTML;
+      }
+    }
+
+    displaySummary();
+  </script>
+</body>
+
+</html>
